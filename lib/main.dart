@@ -5,6 +5,7 @@ import 'package:quotes/features/quotes/data/repositories/quote_repository_impl.d
 import 'package:quotes/features/quotes/domain/use_cases/get_quotes_use_case.dart';
 
 import 'features/quotes/data/data_sources/quote_data_source_impl.dart';
+import 'features/quotes/presentation/quotes_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,11 +18,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Quotes',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const QuotesListScreen(),
     );
   }
 }
