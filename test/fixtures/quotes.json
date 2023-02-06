@@ -1,0 +1,138 @@
+{
+    "count": 10,
+    "totalCount": 2042,
+    "page": 1,
+    "totalPages": 205,
+    "lastItemIndex": 10,
+    "results": [
+        {
+            "_id": "3KGpfidF22D",
+            "author": "William James",
+            "content": "Most people never run far enough on their first wind to find out they've got a second.",
+            "tags": [
+                "sports",
+                "competition"
+            ],
+            "authorSlug": "william-james",
+            "length": 86,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        },
+        {
+            "_id": "ch-0pti9X6U",
+            "author": "Joe Adcock",
+            "content": "Trying to sneak a fastball past Hank Aaron is like trying to sneak the sunrise past a rooster.",
+            "tags": [
+                "sports",
+                "competition"
+            ],
+            "authorSlug": "joe-adcock",
+            "length": 94,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        },
+        {
+            "_id": "MNoB9t3dfeS",
+            "author": "Shaquille O'Neal",
+            "content": "I'm tired of hearing about money, money, money, money, money. I just want to play the game, drink Pepsi, and wear Reebok.",
+            "tags": [
+                "sports",
+                "humorous"
+            ],
+            "authorSlug": "shaquille-o-neal",
+            "length": 121,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        },
+        {
+            "_id": "0Ny0rPtnM3",
+            "author": "Vince Lombardi",
+            "content": "Winners never quit and quitters never win.",
+            "tags": [
+                "sports",
+                "competition"
+            ],
+            "authorSlug": "vince-lombardi",
+            "length": 42,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        },
+        {
+            "_id": "l0LfTgApB3",
+            "author": "Babe Ruth",
+            "content": "The way a team plays as a whole determines its success. You may have the greatest bunch of individual stars in the world, but if they don't play together, the club won't be worth a dime.",
+            "tags": [
+                "sports",
+                "competition"
+            ],
+            "authorSlug": "babe-ruth",
+            "length": 186,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        },
+        {
+            "_id": "fwMKi2Q0Pk",
+            "author": "Michael Phelps",
+            "content": "You can't put a limit on anything. The more you dream, the farther you get.",
+            "tags": [
+                "sports",
+                "competition"
+            ],
+            "authorSlug": "michael-phelps",
+            "length": 75,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        },
+        {
+            "_id": "vZ-5DQPCJag",
+            "author": "George Orwell",
+            "content": "Serious sport has nothing to do with fair play. It is bound up with hatred, jealousy, boastfulness, disregard of all rules and sadistic pleasure in witnessing violence. In other words, it is war minus the shooting.",
+            "tags": [
+                "sports"
+            ],
+            "authorSlug": "george-orwell",
+            "length": 214,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        },
+        {
+            "_id": "81hjl4B9wx2",
+            "author": "Ernie Banks",
+            "content": "The only way to prove that you're a good sport is to lose.",
+            "tags": [
+                "sports",
+                "competition"
+            ],
+            "authorSlug": "ernie-banks",
+            "length": 58,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        },
+        {
+            "_id": "wNd1PnDiIN",
+            "author": "Bob Feller",
+            "content": "Every day is a new opportunity. You can build on yesterday's success or put its failures behind and start over again. That's the way life is, with a new game every day, and that's the way baseball is.",
+            "tags": [
+                "sports",
+                "competition"
+            ],
+            "authorSlug": "bob-feller",
+            "length": 200,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        },
+        {
+            "_id": "lpxXplIA4ie",
+            "author": "Yogi Berra",
+            "content": "Half the lies they tell about me aren't true.",
+            "tags": [
+                "sports",
+                "competition"
+            ],
+            "authorSlug": "yogi-berra",
+            "length": 45,
+            "dateAdded": "2022-07-06",
+            "dateModified": "2022-07-08"
+        }
+    ]
+}

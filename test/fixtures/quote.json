@@ -1,0 +1,13 @@
+{
+    "_id": "12LONGID",
+    "author": "William James",
+    "content": "Most people never run far enough on their first wind to find out they've got a second.",
+    "tags": [
+        "sports",
+        "competition"
+    ],
+    "authorSlug": "william-james",
+    "length": 86,
+    "dateAdded": "2022-07-06",
+    "dateModified": "2022-07-08"
+}
