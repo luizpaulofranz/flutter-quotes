@@ -1,20 +1,26 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:quotes/core/usecase/usecase.dart';
-import 'package:quotes/features/quotes/data/repositories/quote_repository_impl.dart';
-import 'package:quotes/features/quotes/domain/use_cases/get_quotes_use_case.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quotes/dependency_injection.dart';
 
+import 'core/usecase/usecase.dart';
 import 'features/quotes/data/data_sources/quote_data_source_impl.dart';
-import 'features/quotes/presentation/quotes_list_screen.dart';
+import 'features/quotes/data/repositories/quote_repository_impl.dart';
+import 'features/quotes/domain/use_cases/get_quotes_use_case.dart';
+import 'features/quotes/presentation/bloc/quotes_bloc.dart';
+import 'features/quotes/presentation/screen/quotes_list_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  // register all dependencies
+  WidgetsFlutterBinding.ensureInitialized();
+  await registerDI();
+
+  runApp(const Quotes());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Quotes extends StatelessWidget {
+  const Quotes({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +30,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: const QuotesListScreen(),
+      // home: MyHomePage(title:""),
+      home: MultiBlocProvider(
+        providers: [BlocProvider<QuotesBloc>(create: (_) => di<QuotesBloc>())],
+        child: const QuotesListScreen(),
+      ),
     );
   }
 }
@@ -41,9 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+    test();
   }
 
   @override
@@ -64,6 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         (trivia) {
           print('Funcionou!');
+          trivia.forEach((element) {
+            print(element.id);
+          });
         },
       );
       // if(either.isRight()) {
