@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quotes/core/components/custom_app_bar.dart';
-import 'package:quotes/features/quotes/presentation/bloc/quotes_bloc.dart';
-import 'package:quotes/features/quotes/presentation/bloc/quotes_event.dart';
-import 'package:quotes/features/quotes/presentation/bloc/quotes_state.dart';
+import 'package:quotes/features/quotes/presentation/bloc/quotes_list/quotes_list_bloc.dart';
+import 'package:quotes/features/quotes/presentation/bloc/quotes_list/quotes_list_event.dart';
+import 'package:quotes/features/quotes/presentation/bloc/quotes_list/quotes_list_state.dart';
+import 'package:quotes/features/quotes/presentation/screen/single_quote_screen.dart';
 
 class QuotesListScreen extends StatefulWidget {
   const QuotesListScreen({super.key});
@@ -16,7 +17,7 @@ class _QuotesListScreenState extends State<QuotesListScreen> {
   @override
   void initState() {
     super.initState();
-    context.read<QuotesBloc>().add(GetQuotes());
+    context.read<ListQuotesBloc>().add(GetQuotes());
   }
 
   @override
@@ -24,7 +25,8 @@ class _QuotesListScreenState extends State<QuotesListScreen> {
     return Scaffold(
       appBar: CustomAppBar(),
       body: SafeArea(
-        child: BlocBuilder<QuotesBloc, QuotesState>(builder: (context, state) {
+        child: BlocBuilder<ListQuotesBloc, ListQuotesState>(
+            builder: (context, state) {
           if (state is EmptyState || state is LoadingState) {
             return const Center(
               child: CircularProgressIndicator(),
@@ -59,7 +61,15 @@ class _QuotesListScreenState extends State<QuotesListScreen> {
                       ),
                       subtitle: Text(quotes[index].author ?? ""),
                       trailing: const Icon(Icons.arrow_forward),
-                      onTap: () => print('deu'),
+                      onTap: () => Navigator.of(context)
+                          .push(
+                            MaterialPageRoute<void>(
+                              builder: (BuildContext context) =>
+                                  SingleQuotesScreen(quote: quotes[index]),
+                            ),
+                          )
+                          .then((_) =>
+                              context.read<ListQuotesBloc>().add(GetQuotes())),
                     );
                   }),
             ),

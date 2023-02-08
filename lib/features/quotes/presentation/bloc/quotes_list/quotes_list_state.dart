@@ -1,18 +1,18 @@
 import 'package:equatable/equatable.dart';
 import 'package:quotes/features/quotes/domain/entities/quote.dart';
 
-abstract class QuotesState extends Equatable {
-  const QuotesState();
+abstract class ListQuotesState extends Equatable {
+  const ListQuotesState();
 
   @override
   List<Object> get props => [];
 }
 
-class EmptyState extends QuotesState {}
+class EmptyState extends ListQuotesState {}
 
-class LoadingState extends QuotesState {}
+class LoadingState extends ListQuotesState {}
 
-class LoadedState extends QuotesState {
+class LoadedState extends ListQuotesState {
   final List<Quote> quotes;
 
   const LoadedState({required this.quotes});
@@ -21,7 +21,7 @@ class LoadedState extends QuotesState {
   List<Object> get props => [quotes];
 }
 
-class ErrorState extends QuotesState {
+class ErrorState extends ListQuotesState {
   final String message;
 
   const ErrorState({required this.message});

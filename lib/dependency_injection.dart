@@ -6,24 +6,33 @@ import 'package:quotes/features/quotes/data/data_sources/quote_data_source.dart'
 import 'package:quotes/features/quotes/data/data_sources/quote_data_source_impl.dart';
 import 'package:quotes/features/quotes/data/repositories/quote_repository_impl.dart';
 import 'package:quotes/features/quotes/domain/repositories/quote_repository.dart';
+import 'package:quotes/features/quotes/domain/use_cases/delete_quote_use_case.dart';
 import 'package:quotes/features/quotes/domain/use_cases/get_quotes_use_case.dart';
-import 'package:quotes/features/quotes/presentation/bloc/quotes_bloc.dart';
+import 'package:quotes/features/quotes/domain/use_cases/update_quote_use_case.dart';
+import 'package:quotes/features/quotes/presentation/bloc/quotes_list/quotes_list_bloc.dart';
+import 'package:quotes/features/quotes/presentation/bloc/single_quote/single_quote_bloc.dart';
 
 final di = GetIt.instance;
 
 // THIS IS CALLED ON main.dart, at the very beginning.
 Future<void> registerDI() async {
   // Bloc
-  di.registerFactory<QuotesBloc>(
-    () => QuotesBloc(
-      di(),
-      di(),
-    ),
+  di.registerFactory<ListQuotesBloc>(
+    () => ListQuotesBloc(di()),
+  );
+  di.registerFactory<SingleQuoteBloc>(
+    () => SingleQuoteBloc(di(), di()),
   );
 
-  // UseCase
+  // UseCases
   di.registerLazySingleton<GetQuotesUseCase>(
     () => GetQuotesUseCase(di()),
+  );
+  di.registerLazySingleton<UpdateQuotesUseCase>(
+    () => UpdateQuotesUseCase(di()),
+  );
+  di.registerLazySingleton<DeleteQuotesUseCase>(
+    () => DeleteQuotesUseCase(di()),
   );
 
   // Service
@@ -33,12 +42,14 @@ Future<void> registerDI() async {
 
   // Repository
   di.registerLazySingleton<QuoteRepository>(
-    () => QuoteRepositoryImpl(di()),
+    () => QuoteRepositoryImpl(di(), di()),
   );
 
   // DataSource
   di.registerLazySingleton<QuoteDataSource>(
-    () => QuoteDataSourceImpl(client: di()),
+    () => QuoteDataSourceImpl(
+      client: di(),
+    ),
   );
 
   // External
