@@ -9,7 +9,7 @@ import 'package:quotes/features/quotes/domain/repositories/quote_repository.dart
 import 'package:quotes/features/quotes/domain/use_cases/delete_quote_use_case.dart';
 import 'package:quotes/features/quotes/domain/use_cases/get_quotes_use_case.dart';
 import 'package:quotes/features/quotes/domain/use_cases/update_quote_use_case.dart';
-import 'package:quotes/features/quotes/presentation/bloc/quotes_list/quotes_list_bloc.dart';
+import 'package:quotes/features/quotes/presentation/bloc/list_quotes/list_quotes_bloc.dart';
 import 'package:quotes/features/quotes/presentation/bloc/single_quote/single_quote_bloc.dart';
 
 final di = GetIt.instance;

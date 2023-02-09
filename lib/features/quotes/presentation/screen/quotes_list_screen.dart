@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quotes/core/components/custom_app_bar.dart';
-import 'package:quotes/features/quotes/presentation/bloc/quotes_list/quotes_list_bloc.dart';
-import 'package:quotes/features/quotes/presentation/bloc/quotes_list/quotes_list_event.dart';
-import 'package:quotes/features/quotes/presentation/bloc/quotes_list/quotes_list_state.dart';
+import 'package:quotes/features/quotes/presentation/bloc/list_quotes/list_quotes_bloc.dart';
+import 'package:quotes/features/quotes/presentation/bloc/list_quotes/list_quotes_event.dart';
+import 'package:quotes/features/quotes/presentation/bloc/list_quotes/list_quotes_state.dart';
 import 'package:quotes/features/quotes/presentation/screen/single_quote_screen.dart';
 
 class QuotesListScreen extends StatefulWidget {
