@@ -1,16 +1,13 @@
-# quotes
+# Flutter Quotes
 
-A new Flutter project.
+A simple Flutter project. to list programing quotes.
 
-## Getting Started
+We use clean-architecture and TDD with bloc for state management and get_it for DI.
 
-This project is a starting point for a Flutter application.
+## Result
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://user-images.githubusercontent.com/5604719/217688617-4b568971-1e1e-4439-82ae-c8ad8c59fe8c.mov
+
+
